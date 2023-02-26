@@ -1,0 +1,139 @@
+*{
+    font-family: 'Cairo', sans-serif;
+    font-size: 16px !important;
+    font-weight: 600
+}
+body {
+    background-image: linear-gradient(90deg,#822659 50%,#350B40 30%,rgb(70, 0, 39))
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: #822659
+}
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(30deg,#822659,#350B40,rgb(70, 0, 39));
+    border-radius: 5px
+}
+::-webkit-scrollbar-thumb:hover {
+  box-shadow: 3px 3px 5px rgba(70, 0, 39, 0.77);
+    
+}
+input[placeholder]::placeholder {
+    color: white;
+    opacity: .6
+}
+button {
+    cursor: pointer;
+    padding: 10px 30px;
+}
+input[placeholder]:focus,button:focus,button:checked{
+    outline: none
+}
+input[placeholder]:focus {
+    animation: skew .7s ease-in-out
+}
+.time {
+    position: absolute;
+    left: 10px;
+    width: 70%;
+    bottom: 5px;
+    font-size: 12px !important
+}
+.op {
+    opacity: .5
+}
+@media only screen and (min-width: 0px) {
+    .cont-tsak{
+        width: 90%;
+        background-color: rgba(255, 255, 255, 0.47);
+        margin: 30px auto;
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        font-size: 10px;
+        backdrop-filter:blur(3px)
+    }
+    input[placeholder],button{
+        padding: 10px 10px 7px;
+        border: none;
+        margin: 20px 1%;
+        font-size: 18px;
+        color: white;
+        border-radius: 5px;
+        background-color: transparent;
+        box-shadow: 0 3px 5px rgba(70, 0, 39, 0.77)
+    }
+    input[placeholder]{
+        width: 80%;
+        margin: 10px
+    }
+    input[placeholder]+button{
+        width: 50%
+    }
+     .btn-del,.btn-done,.btn-clear {
+        position: absolute;
+        right: 0;
+        bottom: -15px;
+        background-color: #822659;
+        cursor: pointer;
+        color: white;
+        font-size: 14px;
+        padding: 3px 10px 0px;
+        border-radius: 5px;
+    }
+    .btn-done {
+        right: 70px
+    }
+    .btn-clear {
+        color: white;
+        bottom: -6px
+    }
+     .task-text {
+        text-align: left;
+        position: relative;
+        width: 80%;
+        margin: 10px auto;
+        padding: 10px;
+        color: white;
+        overflow: hidden;
+        padding-bottom: 40px;
+        border-radius: 5px;
+        box-shadow: 0 3px 5px rgba(70, 0, 39, 0.77)
+    }
+
+}
+@media only screen and (min-width: 768px) {
+    input[placeholder] {
+        width: 78%
+    }
+     input[placeholder]+button{
+        width: 10%
+    }
+    .task-text {
+        width: 90%
+    }
+}
+.btn-del:hover,.btn-done:hover,.btn-clear:hover,input[placeholder]+button:hover {
+    animation: skew .7s ease-in-out
+}
+@keyframes skew {
+    0% {
+        transform: skewX(0deg)
+    }
+    25% {
+        transform: skewX(20deg)
+    }
+    50% {
+        transform: skewX(-20deg)
+    }
+    75% {
+        transform: skewX(20deg)
+    }
+    100% {
+        transform: skewX(0deg)
+    }
+}
